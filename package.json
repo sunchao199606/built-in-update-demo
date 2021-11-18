@@ -1,0 +1,32 @@
+{
+  "name": "built-in-update-demo",
+  "version": "1.0.0",
+  "description": "electron内置自动更新方式",
+  "main": "./main.js",
+  "scripts": {
+    "start": "electron-builder start",
+    "build": "electron-builder --windows"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^16.0.0",
+    "electron-builder": "^22.13.1"
+  },
+  "dependencies": {},
+  "build": {
+    "productName": "built-in-update-demo",
+    "appId": "com.sun.demo",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
+  }
+}
